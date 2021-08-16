@@ -1,0 +1,16 @@
+{
+  "name": "self-destuction-bot",
+  "version": "1.0.0",
+  "description": "Official Self Destuction Bot of @temp_demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "@temp_demo",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "telegraf": "^3.39.0"
+  }
+}
