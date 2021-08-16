@@ -1,7 +1,7 @@
 # Self-Destruction-Bot
 
 **A Telegram Bot to force users to join a specific channel before sending messages in a group.**
-- Find it on Telegram as [Promoter](https://t.me/Force_Subscriber_V1_Bot)
+<!-- - Find it on Telegram as [Promoter](https://t.me/Force_Subscriber_V1_Bot) -->
 
 ### Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/freecontent/Self-Destruction-Bot)
