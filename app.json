@@ -1,1 +1,34 @@
-
+{
+"name": "Self Destruction Bot",
+  "description": "Telegram's best Self Destruction Bot",
+  "keywords": [
+    "telegram",
+    "best",
+    "self destruction Bot"
+  ],
+  "success_url": "https://t.me/DForDarkAngel",
+  "website": "https://github.com/freecontent/Self-Destruction-Bot",
+  "repository": "https://github.com/freecontent/Self-Destruction-Bot",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "ENV": {
+      "description": "Don't edit this Var😎",
+      "value": "False"
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "allow only pre-defined users to use this bot",
+      "value": "1532971861"
+    }
+  }
+}
