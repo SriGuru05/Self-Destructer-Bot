@@ -6,12 +6,7 @@ const app = express();
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-app.listen(process.env.PORT, function () {
-    const host = server.address().address;
-    const port = server.address().port;
-  
-    console.log('Web server started at http://%s:%s', host, port);
-});
+app.listen(process.env.PORT || 5000);
 
 var TIMEOUT_MILLISECONDS = 60000;
 var TIMEOUT_SECONDS = 60;
