@@ -18,6 +18,10 @@
       "description": "Don't edit this Var😎",
       "value": "False"
     },
+    "TIME": {
+       "description": "Just Testing Time",
+        "value": "5000"
+    },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
