@@ -29,6 +29,7 @@ bot.command('set_timeout', (ctx) => {
 
 bot.command('change_env', (ctx) => {
     const whichENV = ctx.message.text.split('/change_env ')[1];
+    ctx.reply(`current env (TIME) is ${process.env[whichENV]}`);
     changeToNewEnv(whichENV);
 });
 
