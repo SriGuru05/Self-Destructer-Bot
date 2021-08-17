@@ -25,20 +25,6 @@ bot.command('set_timeout', (ctx) => {
     ctx.reply(`Your Timeout Is Set To ${FinalTimeOut}`);
 });
 
-//
-
-bot.command('change_env', (ctx) => {
-    const whichENV = ctx.message.text.split('/change_env ')[1];
-    ctx.reply(`current env (TIME) is ${process.env[whichENV]}`);
-    changeToNewEnv(whichENV);
-});
-
-function changeToNewEnv(file) {
-    process.env[file] = '6000';
-};
-
-//
-
 function secondsToHms(d) {
     d = Number(d);
     var h = Math.floor(d / 3600);
