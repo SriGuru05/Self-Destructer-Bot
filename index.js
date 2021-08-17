@@ -17,13 +17,26 @@ bot.start((ctx) => {
 });
 
 bot.command('set_timeout', (ctx) => {
-    const newTimeOut = ctx.update.message.text.split('/set_timeout ');
+    const newTimeOut = ctx.message.text.split('/set_timeout ');
     const seconds = newTimeOut[1];
     TIMEOUT_SECONDS = seconds;
     const FinalTimeOut = secondsToHms(seconds);
     TIMEOUT_MILLISECONDS = seconds * 1000;
     ctx.reply(`Your Timeout Is Set To ${FinalTimeOut}`);
 });
+
+//
+
+bot.command('change_env', (ctx) => {
+    const whichENV = ctx.message.text.split('/change_env ')[1];
+    changeToNewEnv(whichENV);
+});
+
+function changeToNewEnv(file) {
+    process.env[file] = '6000';
+};
+
+//
 
 function secondsToHms(d) {
     d = Number(d);
