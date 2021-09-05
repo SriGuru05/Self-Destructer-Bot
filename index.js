@@ -15,6 +15,13 @@ var postsStack = [];
 var allMediaPosts = [];
 var TO_CHANNEL = -1001527376572;
 
+bot.catch((err, ctx) => {
+    let mainError;
+    if (err.description) mainError = err.description.split(': ')[1];
+    else mainError = err.split(': ')[1];
+    ctx.reply(mainError);
+});
+
 bot.start((ctx) => {
     ctx.reply('Hi !! Welcome To Self Destruction Bot \nOfficial bot of @temp_demo');
 });
