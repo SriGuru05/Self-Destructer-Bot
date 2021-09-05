@@ -12,6 +12,9 @@ var TIMEOUT_MILLISECONDS = 60000;
 var TIMEOUT_SECONDS = 60;
 var postsStack = [];
 
+var allMediaPosts = [];
+var TO_CHANNEL = -1001527376572;
+
 bot.start((ctx) => {
     ctx.reply('Hi !! Welcome To Self Destruction Bot \nOfficial bot of @temp_demo');
 });
@@ -61,7 +64,20 @@ function startCountDown(msgID) {
     postsStack.push(newMsg);
 };
 
-bot.on(['photo', 'video'], (ctx) => {
+bot.on('video', async(ctx) => {
+    allMediaPosts.push(ctx.message);
+});
+
+bot.command('random', (ctx) => {
+    const videoMessage = allMediaPosts[ Math.floor(Math.random() * allMediaPosts.length)];
+    const videoID = videoMessage.video.file_id;
+    ctx.telegram.sendVideo(TO_CHANNEL,videoID, {
+        caption: videoMessage.caption || '',
+        caption_entities: videoMessage.caption_entities || []
+    })
+});
+
+bot.on(['photo'], (ctx) => {
     startCountDown(ctx.update.message.message_id);
     ctx.telegram.sendMessage(ctx.chat.id, `🔰 *Forward This Message To Your 'Saved Messages' Collection*.\nMessage Will Be Automatically Deleted 🗑️ After ${secondsToHms(TIMEOUT_SECONDS)}.`,
     {
