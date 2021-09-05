@@ -16,10 +16,11 @@ var allMediaPosts = [];
 var TO_CHANNEL = -1001527376572;
 
 bot.catch((err, ctx) => {
-    let mainError;
-    if (err.description) mainError = err.description.split(': ')[1];
-    else mainError = err.split(': ')[1];
-    ctx.reply(mainError);
+    console.log('error--',err)
+//     let mainError;
+//     if (err.description) mainError = err.description.split(': ')[1];
+//     else mainError = err.split(': ')[1];
+    ctx.reply(err);
 });
 
 bot.start((ctx) => {
