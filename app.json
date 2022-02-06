@@ -6,9 +6,9 @@
     "best",
     "self destruction Bot"
   ],
-  "success_url": "https://t.me/DForDarkAngel",
-  "website": "https://github.com/freecontent/Self-Destruction-Bot",
-  "repository": "https://github.com/freecontent/Self-Destruction-Bot",
+  "success_url": "https://t.me/MB_Links",
+  "website": "https://github.com/SriGuru05/Self-Destructer-Bot",
+  "repository": "https://github.com/SriGuru05/Self-Destructer-Bot",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
@@ -32,7 +32,7 @@
     },
     "SUDO_USERS": {
       "description": "allow only pre-defined users to use this bot",
-      "value": "1532971861"
+      "value": "1311721975"
     }
   }
 }
